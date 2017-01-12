@@ -11,7 +11,7 @@ public class SimpleTest {
 
     @Test
     public void lengthTest() {
-        assertTrue(Double.compare(CxfClient.getLengthClient().changeLengthUnit(1, Lengths.KILOMETERS, Lengths.METERS), 1000) == 0);
+        assertTrue(CxfClient.getLengthClient().changeLengthUnit(1, Lengths.KILOMETERS, Lengths.METERS) == 1000);
     }
 
     @Test

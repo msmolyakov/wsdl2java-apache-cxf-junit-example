@@ -12,9 +12,8 @@
         <junit.junit>4.12</junit.junit>
         <org.apache.maven.plugins.maven-surefire-plugin>2.19.1</org.apache.maven.plugins.maven-surefire-plugin>
         <cxf.version>3.1.9</cxf.version>
-        <wsdlDirectory>${basedir}/src/test/resources/wsdl/</wsdlDirectory>
         <build-helper-maven-plugin>1.12</build-helper-maven-plugin>
-        <org.apache.maven.plugins.maven-compiler-plugin>3.3</org.apache.maven.plugins.maven-compiler-plugin>
+        <org.apache.maven.plugins.maven-compiler-plugin>3.6.0</org.apache.maven.plugins.maven-compiler-plugin>
         <java.version>1.8</java.version>
     </properties>
 
@@ -47,19 +46,6 @@
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>${org.apache.maven.plugins.maven-surefire-plugin}</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.apache.maven.surefire</groupId>
-                        <artifactId>surefire-junit47</artifactId>
-                        <version>${org.apache.maven.plugins.maven-surefire-plugin}</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${org.apache.maven.plugins.maven-compiler-plugin}</version>
                 <configuration>
@@ -83,11 +69,11 @@
                             <wsdlOptions>
                                 <!-- "Length/Distance Unit Convertor" service -->
                                 <wsdlOption>
-                                    <wsdl>${wsdlDirectory}/length/length_1.wsdl</wsdl>
+                                    <wsdl>http://www.webservicex.net/length.asmx?wsdl</wsdl>
                                 </wsdlOption>
                                 <!-- "Temperature Unit Convertor" service -->
                                 <wsdlOption>
-                                    <wsdl>${wsdlDirectory}/temperature/ConvertTemperature_1.wsdl</wsdl>
+                                    <wsdl>http://www.webservicex.net/ConvertTemperature.asmx?wsdl</wsdl>
                                 </wsdlOption>
                             </wsdlOptions>
                             <encoding>utf-8</encoding>
